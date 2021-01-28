@@ -10,5 +10,5 @@ setup(
     install_requires=[],
     setup_requires=["pytest-runner"],
     tests_requires=["pytest==6.2.2"],
-    test_suite="tests"
+    test_suite="tests",
 )
