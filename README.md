@@ -8,6 +8,10 @@ for diamond related apps (diamond Stone, diamond reports, etc)
 ## Install
 `pip install stonegrading`
 
+## Build Source
+`pip install -r requirements.txt`    # Installs dependencies for building
+`python setup.py sdist bdist_wheel`
+
 
 ## Contribution Guidelines
 ...
