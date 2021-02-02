@@ -5,9 +5,11 @@
 A package that includes stone fields and base models inheritable and customizable
 for diamond related apps (diamond Stone, diamond reports, etc)
 
+Get the pypi link [here](https://pypi.org/project/stone-grading)
+
 ## Install
 
-`pip install stonegrading`
+`pip install stone-grading`
 
 ## Build Source
 
