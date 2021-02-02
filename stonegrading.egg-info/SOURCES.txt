@@ -1,8 +1,0 @@
-README.md
-setup.py
-stonegrading/__init__.py
-stonegrading/grades.py
-stonegrading.egg-info/PKG-INFO
-stonegrading.egg-info/SOURCES.txt
-stonegrading.egg-info/dependency_links.txt
-stonegrading.egg-info/top_level.txt
