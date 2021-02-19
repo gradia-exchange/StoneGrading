@@ -1,3 +1,6 @@
+import itertools
+
+
 class ColorGrades:
     COLORLESS_D = "D"
     COLORLESS_E = "E"
@@ -43,7 +46,7 @@ class ClarityGrades:
 class GeneralGrades:
     EXCELLENT = "EX"
     VERY_GOOD = "VG"
-    GOOD = "GOOD"
+    GOOD = "GD"
     FAIR = "F"
     POOR = "P"
 
@@ -95,46 +98,56 @@ class GirdleGrades:
 
 
 class Inclusions:
-    BRUISE = "BR"
-    CAVITY = "CV"
-    CHIP = "CH"
-    CLOUD = "CL"
-    FEATHER = "F"
-    INCLUDED_CRYSTAL = "IC"
-    INDENTED_NATURAL = "IN"
-    INTERNAL_GRAINING = "IG"
-    KNOT = "KN"
-    NEEDLE = "ND"
-    PINPOINT = "PP"
-    ABRASION = "AB"
-    SCRATCH = "SC"
-    NICK = "NK"
-    POLISH_LINE = "PL"
-    PIT = "PT"
+    BRUISE = "Br"
+    CAVITY = "Cv"
+    CHIP = "Ch"
+    CLEAVAGE = "Clv"
+    CLOUD = "Cld"
+    CRYSTAL = "Xtl"
+    FEATHER = "Ftr"
+    GRAIN_CENTER = "GrCnt"
+    INDENTED_NATURAL = "IndN"
+    INTERNAL_GRAINING = "IntGr"
+    KNOT = "K"
+    LASER_DRILL_HOLE = "LDH"
+    NEEDLE = "Ndl"
+    PINPOINT = "Pp"
+    TWINNING_WISP = "W"
+    ABRASION = "Abr"
     NATURAL = "N"
+    NICK = "Nk"
+    PIT = "Pit"
+    POLISH_LINE = "PL"
+    BURN_MASK = "Brn"
+    SCRATCH = "S"
+    SURFACE_GRAINING = "SGr"
     EXTRA_FEET = "EF"
-    SURFACE_GRAINING = "SG"
 
     CHOICES = (
         (BRUISE, "Bruise"),
         (CAVITY, "Cavity"),
         (CHIP, "Chip"),
+        (CLEAVAGE, "Cleavage"),
         (CLOUD, "Cloud"),
+        (CRYSTAL, "Xtl"),
         (FEATHER, "Feather"),
-        (INCLUDED_CRYSTAL, "Included crystal"),
+        (GRAIN_CENTER, "Grain Center"),
         (INDENTED_NATURAL, "Indented natural"),
         (INTERNAL_GRAINING, "Internal graining"),
         (KNOT, "knot"),
+        (LASER_DRILL_HOLE, "Laser Drill Hole"),
         (NEEDLE, "Needle"),
         (PINPOINT, "Pinpoint"),
+        (TWINNING_WISP, "Twinning Wisp"),
         (ABRASION, "Abrasion"),
-        (SCRATCH, "Scratch"),
-        (NICK, "Nick"),
-        (POLISH_LINE, "Polish Line"),
-        (PIT, "Pit"),
         (NATURAL, "Natural"),
-        (EXTRA_FEET, "Extra Feet"),
+        (NICK, "Nick"),
+        (PIT, "Pit"),
+        (POLISH_LINE, "Polish Line"),
+        (BURN_MASK, "Burn Mask"),
+        (SCRATCH, "Scratch"),
         (SURFACE_GRAINING, "Surface Graining"),
+        (EXTRA_FEET, "Extra Feet"),
     )
 
 
@@ -158,3 +171,8 @@ class CuletGrades:
         (VERY_LARGE, "Very Large"),
         (EXTREMELY_LARGE, "Extremely Large"),
     )
+
+    MULTI_CHOICES = list(itertools.combinations(CHOICES, 2))
+    MULTI_CHOICES = [list(item) for item in MULTI_CHOICES]
+    MULTI_CHOICES = [sorted(item) for item in MULTI_CHOICES]
+    MULTI_CHOICES = tuple((f"{a[0]}/{b[0]}", f"{a[1]} / {b[1]}") for (a, b) in MULTI_CHOICES)
