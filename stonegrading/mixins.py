@@ -1,8 +1,14 @@
-from django.db import models 
-from django.contrib.auth import get_user_model 
+from django.db import models
+from django.contrib.auth import get_user_model
 
 from .grades import (
-    ColorGrades, ClarityGrades, FluorescenceGrades, CuletGrades, Inclusions, GeneralGrades, GirdleGrades
+    ColorGrades,
+    ClarityGrades,
+    FluorescenceGrades,
+    CuletGrades,
+    Inclusions,
+    GeneralGrades,
+    GirdleGrades,
 )
 
 
@@ -14,7 +20,6 @@ class Inclusion(models.Model):
 
     def __str__(self):
         return self.inclusion
-
 
 
 class BasicGradingMixin(models.Model):
@@ -197,4 +202,3 @@ class GIAGradingMixin(models.Model):
 
     class Meta:
         abstract = True
-
