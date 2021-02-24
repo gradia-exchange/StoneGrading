@@ -2,11 +2,18 @@ from django.db import models
 from django.contrib.auth import get_user_model
 
 from .grades import (
-    GeneralGrades, GirdleGrades, CuletGrades, ColorGrades, ClarityGrades, FluorescenceGrades, Inclusions
+    GeneralGrades,
+    GirdleGrades,
+    CuletGrades,
+    ColorGrades,
+    ClarityGrades,
+    FluorescenceGrades,
+    Inclusions,
 )
 
 
 User = get_user_model()
+
 
 class Inclusion(models.Model):
     inclusion = models.CharField(choices=Inclusions.CHOICES, max_length=5, unique=True)
@@ -155,6 +162,7 @@ class BasicGradingMixin(models.Model):
 
     class Meta:
         abstract = True
+
 
 class GWAIGradingMixin(models.Model):
     gw_returned_date = models.DateTimeField(null=True, blank=True)
