@@ -10,6 +10,8 @@ from .grades import (
     FluorescenceGrades,
 )
 
+from .models import Inclusion
+
 
 User = get_user_model()
 
