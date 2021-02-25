@@ -1,10 +1,45 @@
 Metadata-Version: 2.1
 Name: stone-grading
-Version: 0.1.0
-Summary: Diamond Stone Grading Package. It ships stone fields for reports and actual stones
-Home-page: UNKNOWN
+Version: 0.0.1
+Summary: Diamond Stone Grading Package. It ships stone fields for reports and actual stones with their grades
+Home-page: https://github.com/gradia-exchange/StoneGrading
 Author: Gradia Limited
-License: MIT
-Description: Will add it soon
+Author-email: dev@gradia.net
+License: UNKNOWN
+Description: # Stone Grading Package (stonegrading)
+        
+        ## Description
+        
+        A package that includes stone fields and base models inheritable and customizable
+        for diamond related apps (diamond Stone, diamond reports, etc)
+        
+        Get the pypi link [here](https://pypi.org/project/stone-grading)
+        
+        ## Install
+        
+        `pip install stone-grading`
+        
+        ## Build Source
+        
+        `pip install -r requirements.txt` # Installs dependencies for building  
+        `python setup.py sdist bdist_wheel`
+        
+        ## Contribution Guidelines
+        
+        ...
+        
+        ## Authors
+        
+        1. Desmond Brown
+        2. Gabby Precious
+        3. Conrad Ho
+           ...
+        
+        many more stuffs
+        
 Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operation System :: OS Independent
+Requires-Python: >=3.6
 Description-Content-Type: text/markdown
