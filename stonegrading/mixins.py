@@ -8,18 +8,10 @@ from .grades import (
     ColorGrades,
     ClarityGrades,
     FluorescenceGrades,
-    Inclusions,
 )
 
 
 User = get_user_model()
-
-
-class Inclusion(models.Model):
-    inclusion = models.CharField(choices=Inclusions.CHOICES, max_length=5, unique=True)
-
-    def __str__(self):
-        return self.inclusion
 
 
 class BasicGradingMixin(models.Model):
