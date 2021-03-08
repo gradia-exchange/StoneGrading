@@ -11,13 +11,13 @@ class ColorGrades:
     NEARLY_COLORLESS_J = "J"
 
     CHOICES = (
-        (COLORLESS_D, "Colorless D"),
-        (COLORLESS_E, "Colorless E"),
-        (COLORLESS_F, "Colorless F"),
-        (NEARLY_COLORLESS_G, "Nearly Colorless G"),
-        (NEARLY_COLORLESS_H, "Nearly Colorless H"),
-        (NEARLY_COLORLESS_I, "Nearly Colorless I"),
-        (NEARLY_COLORLESS_J, "Nearly Colorless J"),
+        (COLORLESS_D, "D"),
+        (COLORLESS_E, "E"),
+        (COLORLESS_F, "F"),
+        (NEARLY_COLORLESS_G, "G"),
+        (NEARLY_COLORLESS_H, "H"),
+        (NEARLY_COLORLESS_I, "I"),
+        (NEARLY_COLORLESS_J, "J"),
     )
 
 
@@ -32,14 +32,14 @@ class ClarityGrades:
     INCLUDED = "I1"
 
     CHOICES = (
-        (INTERNALLY_FLAWLESS, "Internally Flawless"),
-        (VERY_VERY_SLIGHTLY_INCLUDED_DEGREE_1, "Very Very Slightly Included Degree 1"),
-        (VERY_VERY_SLIGHTLY_INCLUDED_DEGREE_2, "Very Very Slightly Included Degree 2"),
-        (VERY_SLIGHTLY_INCLUDED_DEGREE_1, "Very Slightly Included Degree 1"),
-        (VERY_SLIGHTLY_INCLUDED_DEGREE_2, "Very Slightly Included Degree 2"),
-        (SLIGHTLY_INCLUDED_DEGREE_1, "Slightly Included Degree 1"),
-        (SLIGHTLY_INCLUDED_DEGREE_2, "Slightly Included Degree 2"),
-        (INCLUDED, "Included"),
+        (INTERNALLY_FLAWLESS, "IF"),
+        (VERY_VERY_SLIGHTLY_INCLUDED_DEGREE_1, "VVS1"),
+        (VERY_VERY_SLIGHTLY_INCLUDED_DEGREE_2, "VVS2"),
+        (VERY_SLIGHTLY_INCLUDED_DEGREE_1, "VS1"),
+        (VERY_SLIGHTLY_INCLUDED_DEGREE_2, "VS2"),
+        (SLIGHTLY_INCLUDED_DEGREE_1, "SI1"),
+        (SLIGHTLY_INCLUDED_DEGREE_2, "SI2"),
+        (INCLUDED, "I1"),
     )
 
 
