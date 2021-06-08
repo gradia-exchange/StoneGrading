@@ -70,14 +70,14 @@ class FluorescenceGrades:
 
 
 class GirdleGrades:
-    EXTREMELY_THIN = "EXT"
+    EXTREMELY_THIN = "ETN"
     VERY_THIN = "VTN"
-    THIN = "THIN"
+    THIN = "THN"
     MEDIUM = "MED"
     SLIGHTLY_THICK = "STK"
     THICK = "THK"
     VERY_THICK = "VTK"
-    EXTREMELY_THICK = "EXT"
+    EXTREMELY_THICK = "ETK"
     FACETED = "F"
     SMOOTH = "SM"
     EXTREMELY_THIN_TO_VERY_THIN = "ETN TO VTN"
