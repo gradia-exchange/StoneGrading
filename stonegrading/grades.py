@@ -118,10 +118,12 @@ class Inclusions:
     NICK = "Nk"
     PIT = "Pit"
     POLISH_LINE = "PL"
-    BURN_MASK = "Brn"
+    BEARDED_GIRDLE = 'BG'
+    POLISH_MARK = 'PM'
+    ROUGH_GIRDLE = 'RG'
     SCRATCH = "S"
     SURFACE_GRAINING = "SGr"
-    EXTRA_FEET = "EF"
+    EXTRA_FACET = "EF"
 
     CHOICES = (
         (BRUISE, "Bruise"),
@@ -144,10 +146,12 @@ class Inclusions:
         (NICK, "Nick"),
         (PIT, "Pit"),
         (POLISH_LINE, "Polish Line"),
-        (BURN_MASK, "Burn Mask"),
+        (BEARDED_GIRDLE, "Bearded Gridle"),
+        (POLISH_MARK, 'Polish Mark'),
+        (ROUGH_GIRDLE, 'Rough Girdle'),
         (SCRATCH, "Scratch"),
         (SURFACE_GRAINING, "Surface Graining"),
-        (EXTRA_FEET, "Extra Feet"),
+        (EXTRA_FACET, "Extra Facet"),
     )
 
 
