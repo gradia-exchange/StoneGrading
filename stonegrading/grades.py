@@ -185,5 +185,5 @@ class CuletDescriptionGrades:
     CHOICES = (
         (NONE, "None"),
         (SLIGHTLY_ABRADED, "Slightly Abraded"),
-        (f"{NONE},{SLIGHTLY_ABRADED}", "None, Slightly Abraded")
+        (f"{NONE},{SLIGHTLY_ABRADED}", "None,Slightly Abraded")
     )
