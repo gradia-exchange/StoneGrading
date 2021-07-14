@@ -176,3 +176,17 @@ class CuletGrades:
     MULTI_CHOICES = [list(item) for item in MULTI_CHOICES]
     MULTI_CHOICES = [sorted(item) for item in MULTI_CHOICES]
     MULTI_CHOICES = tuple((f"{a[0]}/{b[0]}", f"{a[1]} / {b[1]}") for (a, b) in MULTI_CHOICES)
+
+class CuletDescriptionGrades:
+    NONE = "N"
+    SLIGHTLY_ABRADED = "SAB"
+
+    CHOICES = (
+        (NONE, 'None'),
+        (SLIGHTLY_ABRADED, "Very Small"),
+    )
+
+    MULTI_CHOICES = list(itertools.combinations(CHOICES, 2))
+    MULTI_CHOICES = [list(item) for item in MULTI_CHOICES]
+    MULTI_CHOICES = [sorted(item) for item in MULTI_CHOICES]
+    MULTI_CHOICES = tuple((f"{a[0]}, {b[0]}", f"{a[1]}, {b[1]}") for (a,b) in MULTI_CHOICES)
