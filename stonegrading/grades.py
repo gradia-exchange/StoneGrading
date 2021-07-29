@@ -181,9 +181,10 @@ class CuletGrades:
 class CuletDescriptionGrades:
     NONE = "N"
     SLIGHTLY_ABRADED = "SAB"
+    CHIPPED = "CH"
 
     CHOICES = (
         (NONE, "None"),
         (SLIGHTLY_ABRADED, "Slightly Abraded"),
-        (f"{NONE},{SLIGHTLY_ABRADED}", "None,Slightly Abraded")
+        (CHIPPED, "Chipped"),
     )
