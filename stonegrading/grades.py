@@ -118,9 +118,9 @@ class Inclusions:
     NICK = "Nk"
     PIT = "Pit"
     POLISH_LINE = "PL"
-    BEARDED_GIRDLE = 'BG'
-    POLISH_MARK = 'PM'
-    ROUGH_GIRDLE = 'RG'
+    BEARDED_GIRDLE = "BG"
+    POLISH_MARK = "PM"
+    ROUGH_GIRDLE = "RG"
     SCRATCH = "S"
     SURFACE_GRAINING = "SGr"
     EXTRA_FACET = "EF"
@@ -147,8 +147,8 @@ class Inclusions:
         (PIT, "Pit"),
         (POLISH_LINE, "Polish Line"),
         (BEARDED_GIRDLE, "Bearded Gridle"),
-        (POLISH_MARK, 'Polish Mark'),
-        (ROUGH_GIRDLE, 'Rough Girdle'),
+        (POLISH_MARK, "Polish Mark"),
+        (ROUGH_GIRDLE, "Rough Girdle"),
         (SCRATCH, "Scratch"),
         (SURFACE_GRAINING, "Surface Graining"),
         (EXTRA_FACET, "Extra Facet"),
@@ -180,3 +180,10 @@ class CuletGrades:
     MULTI_CHOICES = [list(item) for item in MULTI_CHOICES]
     MULTI_CHOICES = [sorted(item) for item in MULTI_CHOICES]
     MULTI_CHOICES = tuple((f"{a[0]}/{b[0]}", f"{a[1]} / {b[1]}") for (a, b) in MULTI_CHOICES)
+
+
+class DiamondDescription:
+    NATURAL = "NATURAL"
+    UNNATURAL = "UNNATURAL"
+
+    CHOICE = ((NATURAL, "Natural"), (UNNATURAL, "Unnatural"))

@@ -1,14 +1,22 @@
 from django.contrib.auth import get_user_model
 from django.db import models
 
-from .grades import ClarityGrades, ColorGrades, CuletGrades, FluorescenceGrades, GeneralGrades, GirdleGrades
+from .grades import (
+    ClarityGrades,
+    ColorGrades,
+    CuletGrades,
+    FluorescenceGrades,
+    GeneralGrades,
+    GirdleGrades,
+    DiamondDescription,
+)
 from .models import Inclusion
 
 User = get_user_model()
 
 
 class BasicGradingMixin(models.Model):
-    diamond_description = models.CharField(max_length=120, null=True, blank=True)
+    diamond_description = models.CharField(choices=DiamondDescription.CHOICES)
 
     grader_1 = models.ForeignKey(User, on_delete=models.PROTECT, related_name="grader_1_for_stone")
     grader_2 = models.ForeignKey(
@@ -34,7 +42,7 @@ class BasicGradingMixin(models.Model):
     basic_fluorescence_2 = models.CharField(choices=FluorescenceGrades.CHOICES, max_length=4, null=True)
     basic_fluorescence_3 = models.CharField(choices=FluorescenceGrades.CHOICES, max_length=4, null=True)
     basic_final_fluorescence = models.CharField(choices=FluorescenceGrades.CHOICES, max_length=4)
-    
+
     basic_culet_1 = models.CharField(choices=CuletGrades.CHOICES, max_length=2)
     basic_culet_2 = models.CharField(choices=CuletGrades.CHOICES, max_length=2, null=True)
     basic_culet_3 = models.CharField(choices=CuletGrades.CHOICES, max_length=2, null=True)
@@ -97,7 +105,9 @@ class BasicGradingMixin(models.Model):
     lower_half_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
 
     girdle_thickness_rounded = models.DecimalField(max_digits=4, decimal_places=1)
-    girdle_thickness_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True)
+    girdle_thickness_rounded_grade = models.CharField(
+        choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
+    )
     girdle_min_grade = models.CharField(choices=GirdleGrades.CHOICES, max_length=10)
     girdle_max_grade = models.CharField(choices=GirdleGrades.CHOICES, max_length=10)
     girdle_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
@@ -122,7 +132,9 @@ class BasicGradingMixin(models.Model):
     basic_final_cut = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
 
     sarine_cut_pre_polish_symmetry = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    sarine_cut_post_polish_symmetry = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True)
+    sarine_cut_post_polish_symmetry = models.CharField(
+        choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
+    )
 
     # TODO: fix with gradia symmetry
     sarine_symmetry = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
