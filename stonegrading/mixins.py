@@ -8,8 +8,10 @@ from .grades import (
     FluorescenceGrades,
     GeneralGrades,
     GirdleGrades,
+    GirdleCondition,
     DiamondDescription,
 )
+
 from .models import Inclusion
 
 User = get_user_model()
@@ -111,6 +113,7 @@ class BasicGradingMixin(models.Model):
     girdle_min_grade = models.CharField(choices=GirdleGrades.CHOICES, max_length=10)
     girdle_max_grade = models.CharField(choices=GirdleGrades.CHOICES, max_length=10)
     girdle_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    girdle_condition = models.CharField(choices=GirdleCondition.CHOICES, max_length=15)
 
     culet_size_description = models.CharField(choices=CuletGrades.MULTI_CHOICES, max_length=5)
 

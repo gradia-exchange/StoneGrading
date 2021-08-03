@@ -78,9 +78,6 @@ class GirdleGrades:
     THICK = "THK"
     VERY_THICK = "VTK"
     EXTREMELY_THICK = "EXT"
-    FACETED = "F"
-    SMOOTH = "SM"
-    EXTREMELY_THIN_TO_VERY_THIN = "ETN TO VTN"
 
     CHOICES = (
         (EXTREMELY_THIN, "Extremely Thin"),
@@ -91,10 +88,15 @@ class GirdleGrades:
         (THICK, "Thick"),
         (VERY_THICK, "Very Thick"),
         (EXTREMELY_THICK, "Extremely Thick"),
-        (FACETED, "Faceted"),
-        (SMOOTH, "Smooth"),
-        (EXTREMELY_THIN_TO_VERY_THIN, "Extremely thin - very thin"),
     )
+
+
+class GirdleCondition:
+    FACETED = "FAC"
+    POLISHED = "POL"
+    BRUTED = "BRU"
+
+    CHOICE = ((FACETED, "Faceted"), (POLISHED, "Polished"), (BRUTED, "Bruted"))
 
 
 class Inclusions:
