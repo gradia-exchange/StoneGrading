@@ -184,6 +184,18 @@ class CuletGrades:
     MULTI_CHOICES = tuple((f"{a[0]}/{b[0]}", f"{a[1]} / {b[1]}") for (a, b) in MULTI_CHOICES)
 
 
+class CuletCharacteristics:
+    NONE = "N"
+    SLIGHTLY_ABRADED = "SAB"
+    CHIPPED = "CH"
+
+    CHOICES = (
+        (NONE, "N"),
+        (SLIGHTLY_ABRADED, "S Abr"),
+        (CHIPPED, "Ch"),
+    )
+
+
 class DiamondDescription:
     NATURAL = "NATURAL"
     UNNATURAL = "UNNATURAL"
