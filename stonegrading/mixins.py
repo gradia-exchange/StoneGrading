@@ -18,7 +18,7 @@ User = get_user_model()
 
 
 class BasicGradingMixin(models.Model):
-    diamond_description = models.CharField(choices=DiamondDescription.CHOICES)
+    diamond_description = models.CharField(choices=DiamondDescription.CHOICES, max_length=15)
 
     grader_1 = models.ForeignKey(User, on_delete=models.PROTECT, related_name="grader_1_for_stone")
     grader_2 = models.ForeignKey(
