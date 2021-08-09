@@ -327,3 +327,33 @@ class GIAGradingAdjustMixin(models.Model):
     )
 
     gia_adjust_remarks = models.TextField(blank=True, null=True)
+
+
+class AutoGradeMixin(models.Model):
+    auto_table_size_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    auto_crown_angle_rounded_grade_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    auto_pavilion_angle_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    auto_star_length_rounded_grade = models.CharField(
+        choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
+    )
+    auto_lower_half_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    auto_girdle_thick_rounded_grade = models.CharField(
+        choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
+    )
+    auto_girdle_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    auto_crown_height_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    auto_total_depth_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    auto_individual_cut_grade_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    auto_est_table_cut_grade_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    auto_gradia_cut_grade_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    auto_final_sarine_cut_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    auto_final_gradia_cut_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+
+    # TODO fix these names
+    # lowest_individual_cut_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    # est_table_cut_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    # gradia_cut_pre_polish_symmetry = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    # basic_final_cut = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+
+    class Meta:
+        abstract = True
