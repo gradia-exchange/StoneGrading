@@ -127,56 +127,29 @@ class SarineGradingMixin(models.Model):
     total_depth = models.DecimalField(max_digits=4, decimal_places=2)
 
     table_size_rounded = models.IntegerField()
-    # TODO: rounded_grades wil be in autogradedmixin (also todo)
-    # table_size_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-
     crown_angle_rounded = models.DecimalField(max_digits=4, decimal_places=1)
-    # crown_angle_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
 
     pavilion_angle_rounded = models.DecimalField(max_digits=4, decimal_places=1)
-    # pavilion_angle_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-
     star_length_rounded = models.IntegerField(null=True, blank=True)
-    # star_length_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True)
 
     lower_half_rounded = models.IntegerField()
-    # lower_half_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-
     girdle_thickness_rounded = models.DecimalField(max_digits=4, decimal_places=1)
-    # girdle_thickness_rounded_grade = models.CharField(
-    #     choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
-    # )
+
     girdle_min_grade = models.CharField(choices=GirdleGrades.CHOICES, max_length=10)
     girdle_max_grade = models.CharField(choices=GirdleGrades.CHOICES, max_length=10)
-
-    # TODO: double check if its auto graded or graded in basic
-    # girdle_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
 
     culet_size_description = models.CharField(choices=CuletGrades.MULTI_CHOICES, max_length=5)
 
     crown_height_rounded = models.DecimalField(max_digits=4, decimal_places=1)
-    # crown_height_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
 
     pavilion_depth_rounded = models.DecimalField(max_digits=4, decimal_places=1)
 
     total_depth_rounded = models.DecimalField(max_digits=4, decimal_places=1)
-    # total_depth_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
 
     star_length_rounded = models.DecimalField(max_digits=4, decimal_places=1)
-    # star_length_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-
-    # TODO fix these names
-    # lowest_individual_cut_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    # est_table_cut_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    # gradia_cut_pre_polish_symmetry = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    # basic_final_cut = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
 
     sarine_cut_pre_polish_symmetry = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    # sarine_cut_post_polish_symmetry = models.CharField(
-    #     choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
-    # )
 
-    # TODO: fix with gradia symmetry
     sarine_symmetry = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
 
     roundness = models.DecimalField(max_digits=4, decimal_places=1)
@@ -348,12 +321,6 @@ class AutoGradeMixin(models.Model):
     auto_gradia_cut_grade_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
     auto_final_sarine_cut_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
     auto_final_gradia_cut_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-
-    # TODO fix these names
-    # lowest_individual_cut_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    # est_table_cut_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    # gradia_cut_pre_polish_symmetry = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    # basic_final_cut = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
 
     class Meta:
         abstract = True
