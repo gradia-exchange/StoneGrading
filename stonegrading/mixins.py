@@ -224,10 +224,10 @@ class GWGradingAdjustMixin(models.Model):
     gw_color_adjusted_3 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
     gw_color_adjusted_final = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
 
-    gw_clarity_adjusted_1 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5)
-    gw_clarity_adjusted_2 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5)
-    gw_clarity_adjusted_3 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5)
-    gw_clarity_adjusted_final = models.CharField(choices=ClarityGrades.CHOICES, max_length=5)
+    gw_clarity_adjusted_1 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, null=True, blank=True)
+    gw_clarity_adjusted_2 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, null=True, blank=True)
+    gw_clarity_adjusted_3 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, null=True, blank=True)
+    gw_clarity_adjusted_final = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, null=True, blank=True)
 
     gw_fluorescence_adjusted_1 = models.CharField(
         choices=FluorescenceGrades.CHOICES, max_length=4, null=True, blank=True
@@ -273,10 +273,10 @@ class GIAGradingAdjustMixin(models.Model):
     gia_color_adjusted_3 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
     gia_color_adjusted_final = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
 
-    gia_polish_adjusted_1 = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    gia_polish_adjusted_2 = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    gia_polish_adjusted_3 = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    gia_polish_adjusted_final = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    gia_polish_adjusted_1 = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True)
+    gia_polish_adjusted_2 = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True)
+    gia_polish_adjusted_3 = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True)
+    gia_polish_adjusted_final = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True)
 
     gia_culet_adjusted_1 = models.CharField(choices=CuletGrades.CHOICES, max_length=2, blank=True, null=True)
     gia_culet_adjusted_2 = models.CharField(choices=CuletGrades.CHOICES, max_length=2, blank=True, null=True)
@@ -300,24 +300,46 @@ class GIAGradingAdjustMixin(models.Model):
 
 
 class AutoGradeMixin(models.Model):
-    auto_table_size_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    auto_crown_angle_rounded_grade_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    auto_pavilion_angle_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    auto_table_size_rounded_grade = models.CharField(
+        choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
+    )
+    auto_crown_angle_rounded_grade_grade = models.CharField(
+        choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
+    )
+    auto_pavilion_angle_rounded_grade = models.CharField(
+        choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
+    )
     auto_star_length_rounded_grade = models.CharField(
         choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
     )
-    auto_lower_half_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    auto_lower_half_rounded_grade = models.CharField(
+        choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
+    )
     auto_girdle_thick_rounded_grade = models.CharField(
         choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
     )
-    auto_girdle_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    auto_crown_height_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    auto_total_depth_rounded_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    auto_individual_cut_grade_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    auto_est_table_cut_grade_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    auto_gradia_cut_grade_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    auto_final_sarine_cut_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
-    auto_final_gradia_cut_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
+    auto_girdle_grade = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True)
+    auto_crown_height_rounded_grade = models.CharField(
+        choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
+    )
+    auto_total_depth_rounded_grade = models.CharField(
+        choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
+    )
+    auto_individual_cut_grade_grade = models.CharField(
+        choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
+    )
+    auto_est_table_cut_grade_grade = models.CharField(
+        choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
+    )
+    auto_gradia_cut_grade_grade = models.CharField(
+        choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
+    )
+    auto_final_sarine_cut_grade = models.CharField(
+        choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
+    )
+    auto_final_gradia_cut_grade = models.CharField(
+        choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True
+    )
 
     class Meta:
         abstract = True
