@@ -233,4 +233,4 @@ class DiamondDescription:
     NATURAL = "NATURAL"
     UNNATURAL = "UNNATURAL"
 
-    CHOICE = ((NATURAL, "Natural"), (UNNATURAL, "Unnatural"))
+    CHOICES = ((NATURAL, "Natural"), (UNNATURAL, "Unnatural"))
