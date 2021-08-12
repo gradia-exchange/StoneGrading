@@ -86,9 +86,7 @@ class BasicGradingMixin(models.Model):
     basic_inclusions_1 = models.ManyToManyField(Inclusion, related_name="basic_inclusions_1", blank=True)
     basic_inclusions_2 = models.ManyToManyField(Inclusion, related_name="basic_inclusions_2", blank=True)
     basic_inclusions_3 = models.ManyToManyField(Inclusion, related_name="basic_inclusions_3", blank=True)
-    basic_inclusions_final = models.ManyToManyField(
-        Inclusion, related_name="basic_inclusions_final", blank=True
-    )
+    basic_inclusions_final = models.ManyToManyField(Inclusion, related_name="basic_inclusions_final", blank=True)
 
     basic_polish_1 = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, blank=True, null=True)
     basic_polish_2 = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, blank=True, null=True)
@@ -146,8 +144,6 @@ class SarineGradingMixin(models.Model):
     pavilion_depth_rounded = models.DecimalField(max_digits=4, decimal_places=1)
 
     total_depth_rounded = models.DecimalField(max_digits=4, decimal_places=1)
-
-    star_length_rounded = models.DecimalField(max_digits=4, decimal_places=1)
 
     sarine_cut_pre_polish_symmetry = models.CharField(choices=GeneralGrades.CHOICES, max_length=4)
 
