@@ -129,7 +129,7 @@ class GirdleCondition:
     POLISHED = "POL"
     BRUTED = "BRU"
 
-    CHOICE = ((FACETED, "Faceted"), (POLISHED, "Polished"), (BRUTED, "Bruted"))
+    CHOICES = ((FACETED, "Faceted"), (POLISHED, "Polished"), (BRUTED, "Bruted"))
 
 
 class Inclusions:
