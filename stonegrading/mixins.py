@@ -8,6 +8,7 @@ from .grades import (
     FluorescenceGrades,
     GeneralGrades,
     GirdleGrades,
+    CuletCharacteristics,
     GirdleCondition,
     DiamondDescription,
 )
@@ -70,16 +71,16 @@ class BasicGradingMixin(models.Model):
     )
 
     basic_girdle_characteristic_1 = models.CharField(
-        choices=GirdleCharacteristics.CHOICES, max_length=3, blank=True, null=True
+        choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True
     )
     basic_girdle_characteristic_2 = models.CharField(
-        choices=GirdleCharacteristics.CHOICES, max_length=3, blank=True, null=True
+        choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True
     )
     basic_girdle_characteristic_3 = models.CharField(
-        choices=GirdleCharacteristics.CHOICES, max_length=3, blank=True, null=True
+        choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True
     )
     basic_girdle_characteristic_final = models.CharField(
-        choices=GirdleCharacteristics.CHOICES, max_length=3, blank=True, null=True
+        choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True
     )
 
     basic_inclusions_1 = models.ManyToManyField(Inclusion, related_name="basic_inclusions", blank=True, null=True)
