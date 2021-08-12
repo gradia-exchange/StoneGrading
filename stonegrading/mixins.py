@@ -40,10 +40,10 @@ class BasicGradingMixin(models.Model):
     basic_color_3 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, blank=True, null=True)
     basic_color_final = models.CharField(choices=ColorGrades.CHOICES, max_length=1, blank=True, null=True)
 
-    basic_clarity_1 = models.CharField(choices=ClarityGrades.CHOICES, max_length=4, blank=True, null=True)
-    basic_clarity_2 = models.CharField(choices=ClarityGrades.CHOICES, max_length=4, blank=True, null=True)
-    basic_clarity_3 = models.CharField(choices=ClarityGrades.CHOICES, max_length=4, blank=True, null=True)
-    basic_clarity_final = models.CharField(choices=ClarityGrades.CHOICES, max_length=4, blank=True, null=True)
+    basic_clarity_1 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, blank=True, null=True)
+    basic_clarity_2 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, blank=True, null=True)
+    basic_clarity_3 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, blank=True, null=True)
+    basic_clarity_final = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, blank=True, null=True)
 
     basic_fluorescence_1 = models.CharField(choices=FluorescenceGrades.CHOICES, max_length=4, blank=True, null=True)
     basic_fluorescence_2 = models.CharField(choices=FluorescenceGrades.CHOICES, max_length=4, blank=True, null=True)
@@ -83,11 +83,11 @@ class BasicGradingMixin(models.Model):
         choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True
     )
 
-    basic_inclusions_1 = models.ManyToManyField(Inclusion, related_name="basic_inclusions", blank=True, null=True)
-    basic_inclusions_2 = models.ManyToManyField(Inclusion, related_name="basic_inclusions", blank=True, null=True)
-    basic_inclusions_3 = models.ManyToManyField(Inclusion, related_name="basic_inclusions", blank=True, null=True)
+    basic_inclusions_1 = models.ManyToManyField(Inclusion, related_name="basic_inclusions_1", blank=True, null=True)
+    basic_inclusions_2 = models.ManyToManyField(Inclusion, related_name="basic_inclusions_2", blank=True, null=True)
+    basic_inclusions_3 = models.ManyToManyField(Inclusion, related_name="basic_inclusions_3", blank=True, null=True)
     basic_inclusions_final = models.ManyToManyField(
-        Inclusion, related_name="basic_inclusions", blank=True, null=True
+        Inclusion, related_name="basic_inclusions_final", blank=True, null=True
     )
 
     basic_polish_1 = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, blank=True, null=True)
@@ -205,8 +205,8 @@ class GWGradingMixin(models.Model):
     date_from_gw = models.DateTimeField(null=True, blank=True)
     gw_return_reweight = models.DecimalField(max_digits=5, decimal_places=3, null=True, blank=True)
     gw_color = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
-    gw_clarity = models.CharField(choices=ClarityGrades.CHOICES, max_length=4, null=True, blank=True)
-    gw_fluorescence = models.CharField(choices=FluorescenceGrades.CHOICES, max_length=4, null=True, blank=True)
+    gw_clarity = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, null=True, blank=True)
+    gw_fluorescence = models.CharField(choices=FluorescenceGrades.CHOICES, max_length=5, null=True, blank=True)
     gw_remarks = models.TextField(blank=True, null=True)
 
     class Meta:
@@ -228,10 +228,10 @@ class GWGradingAdjustMixin(models.Model):
     gw_color_adjusted_3 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
     gw_color_adjusted_final = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
 
-    gw_clarity_adjusted_1 = models.CharField(choices=ClarityGrades.CHOICES, max_length=4)
-    gw_clarity_adjusted_2 = models.CharField(choices=ClarityGrades.CHOICES, max_length=4)
-    gw_clarity_adjusted_3 = models.CharField(choices=ClarityGrades.CHOICES, max_length=4)
-    gw_clarity_adjusted_final = models.CharField(choices=ClarityGrades.CHOICES, max_length=4)
+    gw_clarity_adjusted_1 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5)
+    gw_clarity_adjusted_2 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5)
+    gw_clarity_adjusted_3 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5)
+    gw_clarity_adjusted_final = models.CharField(choices=ClarityGrades.CHOICES, max_length=5)
 
     gw_fluorescence_adjusted_1 = models.CharField(
         choices=FluorescenceGrades.CHOICES, max_length=4, null=True, blank=True
