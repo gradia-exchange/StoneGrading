@@ -298,6 +298,9 @@ class GIAGradingAdjustMixin(models.Model):
 
     gia_adjust_remarks = models.TextField(blank=True, null=True)
 
+    class Meta:
+        abstract = True
+
 
 class AutoGradeMixin(models.Model):
     auto_table_size_rounded_grade = models.CharField(
