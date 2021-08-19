@@ -159,6 +159,9 @@ class Inclusions:
     SCRATCH = "S"
     SURFACE_GRAINING = "SGr"
     EXTRA_FACET = "EF"
+    ETCH_CHANNELS = "EC"
+    LASER_MANUFACTURING_REMNANTS = "LMR"
+    BURN_MARKS = "brn"
 
     CHOICES = (
         (BRUISE, "Bruise"),
@@ -166,12 +169,12 @@ class Inclusions:
         (CHIP, "Chip"),
         (CLEAVAGE, "Cleavage"),
         (CLOUD, "Cloud"),
-        (CRYSTAL, "Xtl"),
+        (CRYSTAL, "Crystal"),
         (FEATHER, "Feather"),
         (GRAIN_CENTER, "Grain Center"),
-        (INDENTED_NATURAL, "Indented natural"),
-        (INTERNAL_GRAINING, "Internal graining"),
-        (KNOT, "knot"),
+        (INDENTED_NATURAL, "Indented Natural"),
+        (INTERNAL_GRAINING, "Internal Graining"),
+        (KNOT, "Knot"),
         (LASER_DRILL_HOLE, "Laser Drill Hole"),
         (NEEDLE, "Needle"),
         (PINPOINT, "Pinpoint"),
@@ -187,6 +190,9 @@ class Inclusions:
         (SCRATCH, "Scratch"),
         (SURFACE_GRAINING, "Surface Graining"),
         (EXTRA_FACET, "Extra Facet"),
+        (BURN_MARKS, "Burn Marks"),
+        (ETCH_CHANNELS, "Etch Channels"),
+        (LASER_MANUFACTURING_REMNANTS, "Laser Manufacturing Remnants"),
     )
 
 
