@@ -159,6 +159,9 @@ class Inclusions:
     SCRATCH = "S"
     SURFACE_GRAINING = "SGr"
     EXTRA_FACET = "EF"
+    ETCH_CHANNELS = "EC"
+    LASER_MANUFACTURING_REMNANTS = "LMR"
+    BURN_MARKS = "brn"
 
     CHOICES = (
         (BRUISE, "Bruise"),
@@ -187,6 +190,9 @@ class Inclusions:
         (SCRATCH, "Scratch"),
         (SURFACE_GRAINING, "Surface Graining"),
         (EXTRA_FACET, "Extra Facet"),
+        (BURN_MARKS, "Burn Marks"),
+        (ETCH_CHANNELS, "Etch Channels"),
+        (LASER_MANUFACTURING_REMNANTS, "Laser Manufacturing Remnants"),
     )
 
 
