@@ -121,6 +121,7 @@ class GirdleGrades:
         (THICK, "Thick"),
         (VERY_THICK, "Very Thick"),
         (EXTREMELY_THICK, "Extremely Thick"),
+        (EXTREMELY_THIN_TO_VERY_THIN, "Extremely Thin to Very Thin"),
     )
 
 
