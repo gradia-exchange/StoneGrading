@@ -3,21 +3,49 @@ import itertools
 
 class ColorGrades:
     COLORLESS_D = "D"
+    COLORLESS_D_PLUS = "D+"
+    COLORLESS_D_MINUS = "D-"
     COLORLESS_E = "E"
+    COLORLESS_E_PLUS = "E+"
+    COLORLESS_E_MINUS = "E-"
     COLORLESS_F = "F"
+    COLORLESS_F_PLUS = "F+"
+    COLORLESS_F_MINUS = "F-"
     NEARLY_COLORLESS_G = "G"
+    NEARLY_COLORLESS_G_PLUS = "G+"
+    NEARLY_COLORLESS_G_MINUS = "G-"
     NEARLY_COLORLESS_H = "H"
+    NEARLY_COLORLESS_H_PLUS = "H+"
+    NEARLY_COLORLESS_H_MINUS = "H-"
     NEARLY_COLORLESS_I = "I"
+    NEARLY_COLORLESS_I_PLUS = "I+"
+    NEARLY_COLORLESS_I_MINUS = "I-"
     NEARLY_COLORLESS_J = "J"
+    NEARLY_COLORLESS_J_PLUS = "J+"
+    NEARLY_COLORLESS_J_MINUS = "J-"
 
     CHOICES = (
         (COLORLESS_D, "D"),
+        (COLORLESS_D_PLUS, "D"),
+        (COLORLESS_D_MINUS, "D"),
         (COLORLESS_E, "E"),
+        (COLORLESS_E_PLUS, "E"),
+        (COLORLESS_E_MINUS, "E"),
         (COLORLESS_F, "F"),
+        (COLORLESS_F_PLUS, "F"),
+        (COLORLESS_F_MINUS, "F"),
         (NEARLY_COLORLESS_G, "G"),
+        (NEARLY_COLORLESS_G_PLUS, "G"),
+        (NEARLY_COLORLESS_G_MINUS, "G"),
         (NEARLY_COLORLESS_H, "H"),
+        (NEARLY_COLORLESS_H_PLUS, "H"),
+        (NEARLY_COLORLESS_H_MINUS, "H"),
         (NEARLY_COLORLESS_I, "I"),
+        (NEARLY_COLORLESS_I_PLUS, "I"),
+        (NEARLY_COLORLESS_I_MINUS, "I"),
         (NEARLY_COLORLESS_J, "J"),
+        (NEARLY_COLORLESS_J_PLUS, "J"),
+        (NEARLY_COLORLESS_J_MINUS, "J"),
     )
 
 
@@ -217,11 +245,6 @@ class CuletGrades:
         (VERY_LARGE, "Very Large"),
         (EXTREMELY_LARGE, "Extremely Large"),
     )
-
-    MULTI_CHOICES = list(itertools.combinations(CHOICES, 2))
-    MULTI_CHOICES = [list(item) for item in MULTI_CHOICES]
-    MULTI_CHOICES = [sorted(item) for item in MULTI_CHOICES]
-    MULTI_CHOICES = tuple((f"{a[0]}/{b[0]}", f"{a[1]} / {b[1]}") for (a, b) in MULTI_CHOICES)
 
 
 class CuletCharacteristics:
