@@ -70,16 +70,10 @@ class BasicGradingMixin(models.Model):
         choices=CuletCharacteristics.CHOICES, max_length=5, blank=True, null=True
     )
 
-    basic_girdle_characteristic_1 = models.CharField(
-        choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True
-    )
-    basic_girdle_characteristic_2 = models.CharField(
-        choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True
-    )
-    basic_girdle_characteristic_3 = models.CharField(
-        choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True
-    )
-    basic_girdle_characteristic_final = models.CharField(
+    basic_girdle_condition_1 = models.CharField(choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True)
+    basic_girdle_condition_2 = models.CharField(choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True)
+    basic_girdle_condition_3 = models.CharField(choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True)
+    basic_girdle_condition_final = models.CharField(
         choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True
     )
 
