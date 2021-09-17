@@ -194,7 +194,7 @@ class SarineGradingMixin(models.Model):
 class GWGradingMixin(models.Model):
     date_from_gw = models.DateTimeField(null=True, blank=True)
     gw_return_reweight = models.DecimalField(max_digits=5, decimal_places=3, null=True, blank=True)
-    gw_color = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
+    gw_color = models.CharField(choices=ColorGrades.CHOICES, max_length=2, null=True, blank=True)
     gw_clarity = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, null=True, blank=True)
     gw_fluorescence = models.CharField(choices=FluorescenceGrades.CHOICES, max_length=5, null=True, blank=True)
     gw_remarks = models.TextField(blank=True, null=True)
@@ -244,8 +244,8 @@ class GWGradingAdjustMixin(models.Model):
 
 class GIAGradingMixin(models.Model):
     date_from_gia = models.DateTimeField(null=True, blank=True)
-    gia_color = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
-    post_gia_final_color = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
+    gia_color = models.CharField(choices=ColorGrades.CHOICES, max_length=2, null=True, blank=True)
+    post_gia_final_color = models.CharField(choices=ColorGrades.CHOICES, max_length=2, null=True, blank=True)
     gia_material_testing = models.CharField(max_length=20, blank=True, null=True)
 
     class Meta:
