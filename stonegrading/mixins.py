@@ -35,10 +35,10 @@ class BasicGradingMixin(models.Model):
 
     basic_carat = models.DecimalField(max_digits=5, decimal_places=3, blank=True, null=True)
 
-    basic_color_1 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, blank=True, null=True)
-    basic_color_2 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, blank=True, null=True)
-    basic_color_3 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, blank=True, null=True)
-    basic_color_final = models.CharField(choices=ColorGrades.CHOICES, max_length=1, blank=True, null=True)
+    basic_color_1 = models.CharField(choices=ColorGrades.CHOICES, max_length=2, blank=True, null=True)
+    basic_color_2 = models.CharField(choices=ColorGrades.CHOICES, max_length=2, blank=True, null=True)
+    basic_color_3 = models.CharField(choices=ColorGrades.CHOICES, max_length=2, blank=True, null=True)
+    basic_color_final = models.CharField(choices=ColorGrades.CHOICES, max_length=2, blank=True, null=True)
 
     basic_clarity_1 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, blank=True, null=True)
     basic_clarity_2 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, blank=True, null=True)
