@@ -213,10 +213,10 @@ class GWGradingAdjustMixin(models.Model):
     gw_adjust_grader_3 = models.ForeignKey(
         User, on_delete=models.PROTECT, related_name="gw_adjust_grader_3", blank=True, null=True
     )
-    gw_color_adjusted_1 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
-    gw_color_adjusted_2 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
-    gw_color_adjusted_3 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
-    gw_color_adjusted_final = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
+    gw_color_adjusted_1 = models.CharField(choices=ColorGrades.CHOICES, max_length=2, null=True, blank=True)
+    gw_color_adjusted_2 = models.CharField(choices=ColorGrades.CHOICES, max_length=2, null=True, blank=True)
+    gw_color_adjusted_3 = models.CharField(choices=ColorGrades.CHOICES, max_length=2, null=True, blank=True)
+    gw_color_adjusted_final = models.CharField(choices=ColorGrades.CHOICES, max_length=2, null=True, blank=True)
 
     gw_clarity_adjusted_1 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, null=True, blank=True)
     gw_clarity_adjusted_2 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, null=True, blank=True)
@@ -262,10 +262,10 @@ class GIAGradingAdjustMixin(models.Model):
     gia_adjust_grader_3 = models.ForeignKey(
         User, on_delete=models.PROTECT, related_name="gia_adjust_grader_3", blank=True, null=True
     )
-    gia_color_adjusted_1 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
-    gia_color_adjusted_2 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
-    gia_color_adjusted_3 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
-    gia_color_adjusted_final = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
+    gia_color_adjusted_1 = models.CharField(choices=ColorGrades.CHOICES, max_length=2, null=True, blank=True)
+    gia_color_adjusted_2 = models.CharField(choices=ColorGrades.CHOICES, max_length=2, null=True, blank=True)
+    gia_color_adjusted_3 = models.CharField(choices=ColorGrades.CHOICES, max_length=2, null=True, blank=True)
+    gia_color_adjusted_final = models.CharField(choices=ColorGrades.CHOICES, max_length=2, null=True, blank=True)
 
     gia_polish_adjusted_1 = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True)
     gia_polish_adjusted_2 = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True)
