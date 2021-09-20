@@ -91,7 +91,7 @@ class BasicGradingMixin(models.Model):
         choices=GirdleGrades.CHOICES, max_length=10, blank=True, null=True
     )
 
-    basic_remarks = models.TextField(blank=True, null=True)
+    basic_remarks = models.TextField(blank=True, null=True, default="")
 
     class Meta:
         abstract = True
@@ -197,7 +197,7 @@ class GWGradingMixin(models.Model):
     gw_color = models.CharField(choices=ColorGrades.CHOICES, max_length=2, null=True, blank=True)
     gw_clarity = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, null=True, blank=True)
     gw_fluorescence = models.CharField(choices=FluorescenceGrades.CHOICES, max_length=5, null=True, blank=True)
-    gw_remarks = models.TextField(blank=True, null=True)
+    gw_remarks = models.TextField(blank=True, null=True, default="")
 
     class Meta:
         abstract = True
@@ -236,7 +236,7 @@ class GWGradingAdjustMixin(models.Model):
         choices=FluorescenceGrades.CHOICES, max_length=4, null=True, blank=True
     )
 
-    gw_adjust_remarks = models.TextField(blank=True, null=True)
+    gw_adjust_remarks = models.TextField(blank=True, null=True, default="")
 
     class Meta:
         abstract = True
@@ -290,7 +290,7 @@ class GIAGradingAdjustMixin(models.Model):
         choices=CuletCharacteristics.CHOICES, max_length=5, blank=True, null=True
     )
 
-    gia_adjust_remarks = models.TextField(blank=True, null=True)
+    gia_adjust_remarks = models.TextField(blank=True, null=True, default="")
 
     class Meta:
         abstract = True
