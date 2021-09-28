@@ -24,7 +24,7 @@ class ColorGrades:
     NEARLY_COLORLESS_I_PLUS = "I+"
     NEARLY_COLORLESS_J_PLUS = "J+"
 
-    CHOICES = (
+    SINGLE_CHOICES = [
         (COLORLESS_D, "D"),
         (COLORLESS_E, "E"),
         (COLORLESS_F, "F"),
@@ -46,7 +46,12 @@ class ColorGrades:
         (NEARLY_COLORLESS_H_PLUS, "H+"),
         (NEARLY_COLORLESS_I_PLUS, "I+"),
         (NEARLY_COLORLESS_J_PLUS, "J+"),
-    )
+    ]
+
+    options = [option[0] for option in SINGLE_CHOICES]
+    RANGE_CHOICES = [(option, option) for option in itertools.combinations(options, 2)]
+
+    CHOICES = SINGLE_CHOICES + RANGE_CHOICES
 
 
 class ClarityGrades:
