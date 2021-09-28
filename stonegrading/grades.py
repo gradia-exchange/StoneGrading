@@ -49,7 +49,7 @@ class ColorGrades:
     ]
 
     options = [option[0] for option in SINGLE_CHOICES]
-    RANGE_CHOICES = [(option, option) for option in itertools.combinations(options, 2)]
+    RANGE_CHOICES = [(f"{option[0]-option[1]}", f"{option[0]-option[1]}") for option in itertools.combinations(options, 2)]
 
     CHOICES = SINGLE_CHOICES + RANGE_CHOICES
 
