@@ -247,6 +247,7 @@ class GIAGradingMixin(models.Model):
     gia_color = models.CharField(choices=ColorGrades.CHOICES, max_length=5, null=True, blank=True)
     post_gia_final_color = models.CharField(choices=ColorGrades.CHOICES, max_length=5, null=True, blank=True)
     gia_material_testing = models.CharField(max_length=20, blank=True, null=True)
+    gia_diamond_description = models.TextField(null=True, blank=True)
 
     class Meta:
         abstract = True
