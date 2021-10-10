@@ -49,7 +49,9 @@ class ColorGrades:
     ]
 
     options = [option[0] for option in SINGLE_CHOICES]
-    RANGE_CHOICES = [(f"{option[0]}-{option[1]}", f"{option[0]}-{option[1]}") for option in itertools.combinations(options, 2)]
+    RANGE_CHOICES = [
+        (f"{option[0]}-{option[1]}", f"{option[0]}-{option[1]}") for option in itertools.combinations(options, 2)
+    ]
 
     CHOICES = SINGLE_CHOICES + RANGE_CHOICES
 
@@ -124,6 +126,10 @@ class FluorescenceGrades:
     MEDIUM = "M"
     FAINT = "F"
     NONE = "N"
+    MEDIUM_BLUE = "MB"
+    MEDIUM_YELLOW = "MY"
+    MEDIUM_WHITE = "MW"
+    MEDIUM_GREEN = "MG"
 
     CHOICES = (
         (VERY_STRONG, "Very Strong"),
@@ -131,6 +137,10 @@ class FluorescenceGrades:
         (MEDIUM, "Medium"),
         (FAINT, "Faint"),
         (NONE, "None"),
+        (MEDIUM_GREEN, "Medium Green"),
+        (MEDIUM_WHITE, "Medium White"),
+        (MEDIUM_BLUE, "Medium Blue"),
+        (MEDIUM_YELLOW, "Medium Yellow"),
     )
 
 
