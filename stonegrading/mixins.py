@@ -35,10 +35,10 @@ class BasicGradingMixin(models.Model):
 
     basic_carat = models.DecimalField(max_digits=5, decimal_places=3, blank=True, null=True)
 
-    basic_color_1 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, blank=True, null=True)
-    basic_color_2 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, blank=True, null=True)
-    basic_color_3 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, blank=True, null=True)
-    basic_color_final = models.CharField(choices=ColorGrades.CHOICES, max_length=1, blank=True, null=True)
+    basic_color_1 = models.CharField(choices=ColorGrades.CHOICES, max_length=5, blank=True, null=True)
+    basic_color_2 = models.CharField(choices=ColorGrades.CHOICES, max_length=5, blank=True, null=True)
+    basic_color_3 = models.CharField(choices=ColorGrades.CHOICES, max_length=5, blank=True, null=True)
+    basic_color_final = models.CharField(choices=ColorGrades.CHOICES, max_length=5, blank=True, null=True)
 
     basic_clarity_1 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, blank=True, null=True)
     basic_clarity_2 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, blank=True, null=True)
@@ -70,16 +70,10 @@ class BasicGradingMixin(models.Model):
         choices=CuletCharacteristics.CHOICES, max_length=5, blank=True, null=True
     )
 
-    basic_girdle_characteristic_1 = models.CharField(
-        choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True
-    )
-    basic_girdle_characteristic_2 = models.CharField(
-        choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True
-    )
-    basic_girdle_characteristic_3 = models.CharField(
-        choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True
-    )
-    basic_girdle_characteristic_final = models.CharField(
+    basic_girdle_condition_1 = models.CharField(choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True)
+    basic_girdle_condition_2 = models.CharField(choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True)
+    basic_girdle_condition_3 = models.CharField(choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True)
+    basic_girdle_condition_final = models.CharField(
         choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True
     )
 
@@ -97,7 +91,7 @@ class BasicGradingMixin(models.Model):
         choices=GirdleGrades.CHOICES, max_length=10, blank=True, null=True
     )
 
-    basic_remarks = models.TextField(blank=True, null=True)
+    basic_remarks = models.TextField(blank=True, null=True, default="")
 
     class Meta:
         abstract = True
@@ -200,10 +194,10 @@ class SarineGradingMixin(models.Model):
 class GWGradingMixin(models.Model):
     date_from_gw = models.DateTimeField(null=True, blank=True)
     gw_return_reweight = models.DecimalField(max_digits=5, decimal_places=3, null=True, blank=True)
-    gw_color = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
+    gw_color = models.CharField(choices=ColorGrades.CHOICES, max_length=5, null=True, blank=True)
     gw_clarity = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, null=True, blank=True)
     gw_fluorescence = models.CharField(choices=FluorescenceGrades.CHOICES, max_length=5, null=True, blank=True)
-    gw_remarks = models.TextField(blank=True, null=True)
+    gw_remarks = models.TextField(blank=True, null=True, default="")
 
     class Meta:
         abstract = True
@@ -219,10 +213,10 @@ class GWGradingAdjustMixin(models.Model):
     gw_adjust_grader_3 = models.ForeignKey(
         User, on_delete=models.PROTECT, related_name="gw_adjust_grader_3", blank=True, null=True
     )
-    gw_color_adjusted_1 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
-    gw_color_adjusted_2 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
-    gw_color_adjusted_3 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
-    gw_color_adjusted_final = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
+    gw_color_adjusted_1 = models.CharField(choices=ColorGrades.CHOICES, max_length=5, null=True, blank=True)
+    gw_color_adjusted_2 = models.CharField(choices=ColorGrades.CHOICES, max_length=5, null=True, blank=True)
+    gw_color_adjusted_3 = models.CharField(choices=ColorGrades.CHOICES, max_length=5, null=True, blank=True)
+    gw_color_adjusted_final = models.CharField(choices=ColorGrades.CHOICES, max_length=5, null=True, blank=True)
 
     gw_clarity_adjusted_1 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, null=True, blank=True)
     gw_clarity_adjusted_2 = models.CharField(choices=ClarityGrades.CHOICES, max_length=5, null=True, blank=True)
@@ -242,7 +236,7 @@ class GWGradingAdjustMixin(models.Model):
         choices=FluorescenceGrades.CHOICES, max_length=4, null=True, blank=True
     )
 
-    gw_adjust_remarks = models.TextField(blank=True, null=True)
+    gw_adjust_remarks = models.TextField(blank=True, null=True, default="")
 
     class Meta:
         abstract = True
@@ -250,9 +244,11 @@ class GWGradingAdjustMixin(models.Model):
 
 class GIAGradingMixin(models.Model):
     date_from_gia = models.DateTimeField(null=True, blank=True)
-    gia_color = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
-    post_gia_final_color = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
+    gia_color = models.CharField(choices=ColorGrades.CHOICES, max_length=5, null=True, blank=True)
+    post_gia_final_color = models.CharField(choices=ColorGrades.CHOICES, max_length=5, null=True, blank=True)
     gia_material_testing = models.CharField(max_length=20, blank=True, null=True)
+    gia_diamond_description = models.TextField(null=True, blank=True)
+    gia_remarks = models.TextField(null=True, blank=True)
 
     class Meta:
         abstract = True
@@ -268,10 +264,10 @@ class GIAGradingAdjustMixin(models.Model):
     gia_adjust_grader_3 = models.ForeignKey(
         User, on_delete=models.PROTECT, related_name="gia_adjust_grader_3", blank=True, null=True
     )
-    gia_color_adjusted_1 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
-    gia_color_adjusted_2 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
-    gia_color_adjusted_3 = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
-    gia_color_adjusted_final = models.CharField(choices=ColorGrades.CHOICES, max_length=1, null=True, blank=True)
+    gia_color_adjusted_1 = models.CharField(choices=ColorGrades.CHOICES, max_length=5, null=True, blank=True)
+    gia_color_adjusted_2 = models.CharField(choices=ColorGrades.CHOICES, max_length=5, null=True, blank=True)
+    gia_color_adjusted_3 = models.CharField(choices=ColorGrades.CHOICES, max_length=5, null=True, blank=True)
+    gia_color_adjusted_final = models.CharField(choices=ColorGrades.CHOICES, max_length=5, null=True, blank=True)
 
     gia_polish_adjusted_1 = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True)
     gia_polish_adjusted_2 = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True)
@@ -296,7 +292,7 @@ class GIAGradingAdjustMixin(models.Model):
         choices=CuletCharacteristics.CHOICES, max_length=5, blank=True, null=True
     )
 
-    gia_adjust_remarks = models.TextField(blank=True, null=True)
+    gia_adjust_remarks = models.TextField(blank=True, null=True, default="")
 
     class Meta:
         abstract = True

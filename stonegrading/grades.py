@@ -21,10 +21,27 @@ class ColorGrades:
     NEARLY_COLORLESS_I_PLUS = "I+"
     NEARLY_COLORLESS_I_MINUS = "I-"
     NEARLY_COLORLESS_J = "J"
+<<<<<<< HEAD
     NEARLY_COLORLESS_J_PLUS = "J+"
     NEARLY_COLORLESS_J_MINUS = "J-"
+=======
+    COLORLESS_D_MINUS = "D-"
+    COLORLESS_E_MINUS = "E-"
+    COLORLESS_F_MINUS = "F-"
+    NEARLY_COLORLESS_G_MINUS = "G-"
+    NEARLY_COLORLESS_H_MINUS = "H-"
+    NEARLY_COLORLESS_I_MINUS = "I-"
+    NEARLY_COLORLESS_J_MINUS = "J-"
+    COLORLESS_D_PLUS = "D+"
+    COLORLESS_E_PLUS = "E+"
+    COLORLESS_F_PLUS = "F+"
+    NEARLY_COLORLESS_G_PLUS = "G+"
+    NEARLY_COLORLESS_H_PLUS = "H+"
+    NEARLY_COLORLESS_I_PLUS = "I+"
+    NEARLY_COLORLESS_J_PLUS = "J+"
+>>>>>>> 7d975e614efb07499ba253e1dad9b0cbdf0a1325
 
-    CHOICES = (
+    SINGLE_CHOICES = [
         (COLORLESS_D, "D"),
         (COLORLESS_D_PLUS, "D"),
         (COLORLESS_D_MINUS, "D"),
@@ -44,9 +61,34 @@ class ColorGrades:
         (NEARLY_COLORLESS_I_PLUS, "I"),
         (NEARLY_COLORLESS_I_MINUS, "I"),
         (NEARLY_COLORLESS_J, "J"),
+<<<<<<< HEAD
         (NEARLY_COLORLESS_J_PLUS, "J"),
         (NEARLY_COLORLESS_J_MINUS, "J"),
     )
+=======
+        (COLORLESS_D_MINUS, "D-"),
+        (COLORLESS_E_MINUS, "E-"),
+        (COLORLESS_F_MINUS, "F-"),
+        (NEARLY_COLORLESS_G_MINUS, "G-"),
+        (NEARLY_COLORLESS_H_MINUS, "H-"),
+        (NEARLY_COLORLESS_I_MINUS, "I-"),
+        (NEARLY_COLORLESS_J_MINUS, "J-"),
+        (COLORLESS_D_PLUS, "D+"),
+        (COLORLESS_E_PLUS, "E+"),
+        (COLORLESS_F_PLUS, "F+"),
+        (NEARLY_COLORLESS_G_PLUS, "G+"),
+        (NEARLY_COLORLESS_H_PLUS, "H+"),
+        (NEARLY_COLORLESS_I_PLUS, "I+"),
+        (NEARLY_COLORLESS_J_PLUS, "J+"),
+    ]
+
+    options = [option[0] for option in SINGLE_CHOICES]
+    RANGE_CHOICES = [
+        (f"{option[0]}-{option[1]}", f"{option[0]}-{option[1]}") for option in itertools.combinations(options, 2)
+    ]
+
+    CHOICES = SINGLE_CHOICES + RANGE_CHOICES
+>>>>>>> 7d975e614efb07499ba253e1dad9b0cbdf0a1325
 
 
 class ClarityGrades:
@@ -119,6 +161,10 @@ class FluorescenceGrades:
     MEDIUM = "M"
     FAINT = "F"
     NONE = "N"
+    MEDIUM_BLUE = "MB"
+    MEDIUM_YELLOW = "MY"
+    MEDIUM_WHITE = "MW"
+    MEDIUM_GREEN = "MG"
 
     CHOICES = (
         (VERY_STRONG, "Very Strong"),
@@ -126,6 +172,10 @@ class FluorescenceGrades:
         (MEDIUM, "Medium"),
         (FAINT, "Faint"),
         (NONE, "None"),
+        (MEDIUM_GREEN, "Medium Green"),
+        (MEDIUM_WHITE, "Medium White"),
+        (MEDIUM_BLUE, "Medium Blue"),
+        (MEDIUM_YELLOW, "Medium Yellow"),
     )
 
 
@@ -213,7 +263,7 @@ class Inclusions:
         (NICK, "Nick"),
         (PIT, "Pit"),
         (POLISH_LINE, "Polish Line"),
-        (BEARDED_GIRDLE, "Bearded Gridle"),
+        (BEARDED_GIRDLE, "Bearded Girdle"),
         (POLISH_MARK, "Polish Mark"),
         (ROUGH_GIRDLE, "Rough Girdle"),
         (SCRATCH, "Scratch"),
