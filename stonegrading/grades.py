@@ -234,7 +234,7 @@ class Inclusions:
         (NICK, "Nick"),
         (PIT, "Pit"),
         (POLISH_LINE, "Polish Line"),
-        (BEARDED_GIRDLE, "Bearded Gridle"),
+        (BEARDED_GIRDLE, "Bearded Girdle"),
         (POLISH_MARK, "Polish Mark"),
         (ROUGH_GIRDLE, "Rough Girdle"),
         (SCRATCH, "Scratch"),
