@@ -133,7 +133,23 @@ class GeneralGrades:
     POOR_PLUS = "P+"
     POOR_MINUS = "P-"
 
-    CHOICES = ((EXCELLENT, "Excellent"), (VERY_GOOD, "Very Good"), (GOOD, "Good"), (FAIR, "Fair"), (POOR, "Poor"))
+    CHOICES = (
+        (EXCELLENT, "Excellent"),
+        (VERY_GOOD, "Very Good"),
+        (GOOD, "Good"),
+        (FAIR, "Fair"),
+        (POOR, "Poor"),
+        (EXCELLENT_PLUS, EXCELLENT_PLUS),
+        (EXCELLENT_MINUS, EXCELLENT_MINUS),
+        (GOOD_PLUS, GOOD_PLUS),
+        (GOOD_MINUS, GOOD_MINUS),
+        (POOR_PLUS, POOR_PLUS),
+        (POOR_MINUS, POOR_MINUS),
+        (VERY_GOOD_PLUS, VERY_GOOD_PLUS),
+        (VERY_GOOD_MINUS, VERY_GOOD_MINUS),
+        (FAIR_PLUS, FAIR_PLUS),
+        (FAIR_MINUS, FAIR_MINUS),
+    )
 
 
 class FluorescenceGrades:
