@@ -122,6 +122,16 @@ class GeneralGrades:
     GOOD = "GD"
     FAIR = "F"
     POOR = "P"
+    EXCELLENT_PLUS = "EX+"
+    EXCELLENT_MINUS = "EX-"
+    VERY_GOOD_PLUS = "VG+"
+    VERY_GOOD_MINUS = "VG-"
+    GOOD_PLUS = "G+"
+    GOOD_MINUS = "G-"
+    FAIR_PLUS = "F+"
+    FAIR_MINUS = "F-"
+    POOR_PLUS = "P+"
+    POOR_MINUS = "P-"
 
     CHOICES = ((EXCELLENT, "Excellent"), (VERY_GOOD, "Very Good"), (GOOD, "Good"), (FAIR, "Fair"), (POOR, "Poor"))
 
