@@ -162,6 +162,14 @@ class FluorescenceGrades:
     MEDIUM_YELLOW = "MY"
     MEDIUM_WHITE = "MW"
     MEDIUM_GREEN = "MG"
+    VERY_STRONG_BLUE = "VSB"
+    VERY_STRONG_YELLOW = "VSY"
+    VERY_STRONG_WHITE = "VSW"
+    VERY_STRONG_GREEN = "VSG"
+    STRONG_BLUE = "SB"
+    STRONG_YELLOW = "SY"
+    STRONG_WHITE = "SW"
+    STRONG_GREEN = "SG"
 
     CHOICES = (
         (VERY_STRONG, "Very Strong"),
@@ -173,6 +181,14 @@ class FluorescenceGrades:
         (MEDIUM_WHITE, "Medium White"),
         (MEDIUM_BLUE, "Medium Blue"),
         (MEDIUM_YELLOW, "Medium Yellow"),
+        (VERY_STRONG_BLUE, "Very Strong Blue"),
+        (VERY_STRONG_YELLOW, "Very Strong Yellow"),
+        (VERY_STRONG_WHITE, "Very Strong White"),
+        (VERY_STRONG_GREEN, "Very Strong Green"),
+        (STRONG_BLUE, "Strong Blue"),
+        (STRONG_YELLOW, "Strong Yellow"),
+        (STRONG_WHITE, "Strong White"),
+        (STRONG_GREEN, "Strong Green"),
     )
 
 
