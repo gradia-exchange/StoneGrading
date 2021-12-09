@@ -10,6 +10,7 @@ class ColorGrades:
     NEARLY_COLORLESS_I = "I"
     NEARLY_COLORLESS_J = "J"
     NEARLY_COLORLESS_K = "K"
+    NEARLY_COLORLESS_Z = "Z"
     COLORLESS_D_MINUS = "D-"
     COLORLESS_E_MINUS = "E-"
     COLORLESS_F_MINUS = "F-"
@@ -18,6 +19,7 @@ class ColorGrades:
     NEARLY_COLORLESS_I_MINUS = "I-"
     NEARLY_COLORLESS_J_MINUS = "J-"
     NEARLY_COLORLESS_K_MINUS = "K-"
+    NEARLY_COLORLESS_Z_MINUS = "Z-"
     NEARLY_COLORLESS_L = "L"
     NEARLY_COLORLESS_L_MINUS = "L-"
     NEARLY_COLORLESS_M = "M"
@@ -32,6 +34,7 @@ class ColorGrades:
     NEARLY_COLORLESS_K_PLUS = "K+"
     NEARLY_COLORLESS_L_PLUS = "L+"
     NEARLY_COLORLESS_M_PLUS = "M+"
+    NEARLY_COLORLESS_Z_PLUS = "Z+"
 
     SINGLE_CHOICES = [
         (COLORLESS_D, "D"),
@@ -44,6 +47,7 @@ class ColorGrades:
         (NEARLY_COLORLESS_K, "K"),
         (NEARLY_COLORLESS_L, "L"),
         (NEARLY_COLORLESS_M, "M"),
+        (NEARLY_COLORLESS_Z, "Z"),
         (COLORLESS_D_MINUS, "D-"),
         (COLORLESS_E_MINUS, "E-"),
         (COLORLESS_F_MINUS, "F-"),
@@ -54,6 +58,7 @@ class ColorGrades:
         (NEARLY_COLORLESS_K_MINUS, "K-"),
         (NEARLY_COLORLESS_L_MINUS, "L-"),
         (NEARLY_COLORLESS_M_MINUS, "M-"),
+        (NEARLY_COLORLESS_Z_MINUS, "Z-"),
         (COLORLESS_D_PLUS, "D+"),
         (COLORLESS_E_PLUS, "E+"),
         (COLORLESS_F_PLUS, "F+"),
@@ -64,6 +69,7 @@ class ColorGrades:
         (NEARLY_COLORLESS_K_PLUS, "K+"),
         (NEARLY_COLORLESS_L_PLUS, "L+"),
         (NEARLY_COLORLESS_M_PLUS, "M+"),
+        (NEARLY_COLORLESS_Z_PLUS, "Z+"),
     ]
 
     options = [option[0] for option in SINGLE_CHOICES]
