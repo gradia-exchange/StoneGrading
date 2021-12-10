@@ -337,11 +337,13 @@ class CuletCharacteristics:
     NONE = "N"
     SLIGHTLY_ABRADED = "SAB"
     CHIPPED = "CH"
+    VERY_SLIGHTLY_ABRADED = "VSAB"
 
     CHOICES = (
         (NONE, "None"),
         (SLIGHTLY_ABRADED, "Slightly Abraded"),
         (CHIPPED, "Chipped"),
+        (VERY_SLIGHTLY_ABRADED, "Very Slightly Abraded"),
     )
 
 
