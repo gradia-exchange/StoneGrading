@@ -316,7 +316,7 @@ class CuletGrades:
     VERY_LARGE = "VL"
     EXTREMELY_LARGE = "XL"
 
-    CHOICES = (
+    SINGLE_CHOICES = [
         (NONE, "None"),
         (VERY_SMALL, "Very Small"),
         (SMALL, "Small"),
@@ -325,12 +325,14 @@ class CuletGrades:
         (LARGE, "Large"),
         (VERY_LARGE, "Very Large"),
         (EXTREMELY_LARGE, "Extremely Large"),
-    )
+    ]
 
-    MULTI_CHOICES = list(itertools.combinations(CHOICES, 2))
+    MULTI_CHOICES = list(itertools.combinations(SINGLE_CHOICES, 2))
     MULTI_CHOICES = [list(item) for item in MULTI_CHOICES]
     MULTI_CHOICES = [sorted(item) for item in MULTI_CHOICES]
-    MULTI_CHOICES = tuple((f"{a[0]}/{b[0]}", f"{a[1]} / {b[1]}") for (a, b) in MULTI_CHOICES)
+    MULTI_CHOICES = [(f"{a[0]}/{b[0]}", f"{a[1]} / {b[1]}") for (a, b) in MULTI_CHOICES]
+
+    CHOICES = tuple(SINGLE_CHOICES + MULTI_CHOICES)
 
 
 class CuletCharacteristics:
