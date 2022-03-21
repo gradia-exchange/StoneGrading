@@ -131,7 +131,7 @@ class SarineGradingMixin(models.Model):
     girdle_min_grade = models.CharField(choices=GirdleGrades.CHOICES, max_length=10)
     girdle_max_grade = models.CharField(choices=GirdleGrades.CHOICES, max_length=10)
 
-    culet_size_description = models.CharField(choices=CuletGrades.MULTI_CHOICES, max_length=5)
+    culet_size_description = models.CharField(choices=CuletGrades.CHOICES, max_length=5)
 
     crown_height_rounded = models.DecimalField(max_digits=4, decimal_places=1)
 
