@@ -52,10 +52,10 @@ class BasicGradingMixin(models.Model):
         choices=FluorescenceGrades.CHOICES, max_length=4, blank=True, null=True
     )
 
-    basic_culet_1 = models.CharField(choices=CuletGrades.CHOICES, max_length=2, blank=True, null=True)
-    basic_culet_2 = models.CharField(choices=CuletGrades.CHOICES, max_length=2, blank=True, null=True)
-    basic_culet_3 = models.CharField(choices=CuletGrades.CHOICES, max_length=2, blank=True, null=True)
-    basic_culet_final = models.CharField(choices=CuletGrades.CHOICES, max_length=2, blank=True, null=True)
+    basic_culet_1 = models.CharField(choices=CuletGrades.CHOICES, max_length=5, blank=True, null=True)
+    basic_culet_2 = models.CharField(choices=CuletGrades.CHOICES, max_length=5, blank=True, null=True)
+    basic_culet_3 = models.CharField(choices=CuletGrades.CHOICES, max_length=5, blank=True, null=True)
+    basic_culet_final = models.CharField(choices=CuletGrades.CHOICES, max_length=5, blank=True, null=True)
 
     basic_culet_characteristic_1 = models.CharField(
         choices=CuletCharacteristics.CHOICES, max_length=5, blank=True, null=True
@@ -274,10 +274,10 @@ class GIAGradingAdjustMixin(models.Model):
     gia_polish_adjusted_3 = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True)
     gia_polish_adjusted_final = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, null=True, blank=True)
 
-    gia_culet_adjusted_1 = models.CharField(choices=CuletGrades.CHOICES, max_length=2, blank=True, null=True)
-    gia_culet_adjusted_2 = models.CharField(choices=CuletGrades.CHOICES, max_length=2, blank=True, null=True)
-    gia_culet_adjusted_3 = models.CharField(choices=CuletGrades.CHOICES, max_length=2, blank=True, null=True)
-    gia_culet_adjusted_final = models.CharField(choices=CuletGrades.CHOICES, max_length=2, blank=True, null=True)
+    gia_culet_adjusted_1 = models.CharField(choices=CuletGrades.CHOICES, max_length=5, blank=True, null=True)
+    gia_culet_adjusted_2 = models.CharField(choices=CuletGrades.CHOICES, max_length=5, blank=True, null=True)
+    gia_culet_adjusted_3 = models.CharField(choices=CuletGrades.CHOICES, max_length=5, blank=True, null=True)
+    gia_culet_adjusted_final = models.CharField(choices=CuletGrades.CHOICES, max_length=5, blank=True, null=True)
 
     gia_culet_characteristic_1 = models.CharField(
         choices=CuletCharacteristics.CHOICES, max_length=5, blank=True, null=True
