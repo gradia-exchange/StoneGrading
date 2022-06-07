@@ -77,10 +77,10 @@ class BasicGradingMixin(models.Model):
         choices=GirdleCondition.CHOICES, max_length=3, blank=True, null=True
     )
 
-    basic_inclusions_1 = models.CharField(max_length=50, related_name="basic_inclusions_1", blank=True, default="")
-    basic_inclusions_2 = models.CharField(max_length=50, related_name="basic_inclusions_2", blank=True, default="")
-    basic_inclusions_3 = models.CharField(max_length=50, related_name="basic_inclusions_3", blank=True, default="")
-    basic_inclusions_final = models.CharField(max_length=50, related_name="basic_inclusions_final", blank=True, default="")
+    basic_inclusions_1 = models.CharField(max_length=50, blank=True, default="")
+    basic_inclusions_2 = models.CharField(max_length=50, blank=True, default="")
+    basic_inclusions_3 = models.CharField(max_length=50, blank=True, default="")
+    basic_inclusions_final = models.CharField(max_length=50, blank=True, default="")
 
     basic_polish_1 = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, blank=True, null=True)
     basic_polish_2 = models.CharField(choices=GeneralGrades.CHOICES, max_length=4, blank=True, null=True)
