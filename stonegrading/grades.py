@@ -105,6 +105,9 @@ class ClarityGrades:
     INCLUDED_PLUS = "I1+"
     INCLUDED = "I1"
     INCLUDED_MINUS = "I1-"
+    INCLUDED_2 = "I2"
+    INCLUDED_2_PLUS = "I2+"
+    INCLUDED_2_MINUS = "I2-"
 
     CHOICES = (
         (INTERNALLY_FLAWLESS_PLUS, "IF+"),
@@ -131,6 +134,9 @@ class ClarityGrades:
         (INCLUDED_PLUS, "I1+"),
         (INCLUDED, "I1"),
         (INCLUDED_MINUS, "I1-"),
+        (INCLUDED_2, "I2"),
+        (INCLUDED_2_PLUS, "I2+"),
+        (INCLUDED_2_MINUS, "I2-")
     )
 
 
